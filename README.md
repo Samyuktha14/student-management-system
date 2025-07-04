@@ -1,4 +1,3 @@
-
 # 🧑‍🎓 Student Management System – Java + JDBC + MySQL
 
 A **console-based CRUD application** to manage student records, built using **Java**, **JDBC**, and **MySQL**.
@@ -26,17 +25,13 @@ A **console-based CRUD application** to manage student records, built using **Ja
 
 ---
 
-## 🗃️ Database Setup
+## 🔐 Secure DB Credentials (Recommended)
 
-Run these queries in MySQL Shell or any SQL client:
+To **hide your MySQL password**, use a `.properties` config file.
 
-```sql
-CREATE DATABASE studentdb;
-USE studentdb;
+### Step 1: Create `dbconfig.properties` in your `src/` folder:
 
-CREATE TABLE students (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    age INT,
-    grade VARCHAR(10)
-);
+```properties
+db.url=jdbc:mysql://localhost:3306/studentdb
+db.user=root
+db.password=your_mysql_password
